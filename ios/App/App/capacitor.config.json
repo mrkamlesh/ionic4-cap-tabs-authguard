@@ -1,0 +1,7 @@
+{
+  "appId": "ionic.cap.tab",
+  "appName": "capTabs",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
