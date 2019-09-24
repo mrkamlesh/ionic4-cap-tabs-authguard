@@ -15,7 +15,7 @@ export class AuthService {
     private httpService: HttpService,
     private storageService: StorageService,
     private router: Router
-  ) {}
+  ) { }
 
   getUserData() {
     this.storageService.get(AuthConstants.AUTH).then(res => {
@@ -34,6 +34,6 @@ export class AuthService {
   logout() {
     this.storageService.clear();
     this.userData$.next('');
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
   }
 }
