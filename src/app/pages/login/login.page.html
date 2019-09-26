@@ -1,15 +1,9 @@
-<ion-header>
-  <ion-toolbar color="mango">
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding='true'>
   <div class="center">
     <img src="assets/images/logo.png" class="smallLogo" />
     <h1>Sign In</h1>
   </div>
-  <form>
+  <form (ngSubmit)="loginAction()">
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Username</ion-label>
@@ -21,10 +15,14 @@
         <ion-input autocomplete="off" type="password" name="password" [(ngModel)]="postData.password"></ion-input>
       </ion-item>
 
-      <ion-item lines='none'>
-        <a routerLink='/signup'>Create Account</a>
-      </ion-item>
     </ion-list>
-    <ion-button expand="block" share="round" color="success" (click)="loginAction()">Login</ion-button>
+    <ion-button type="submit" expand="block" share="round" color="success">Login</ion-button>
   </form>
+
+
+  <ion-list lines="full">
+    <ion-item href="/signup" lines='none'>
+      <ion-label>Create Account</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
